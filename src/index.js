@@ -1,3 +1,6 @@
-const sum = (a, b) => a + b;
+const sum = require('./sum');
 
-sum(2, 3);
+
+const total = sum(2, 5);
+
+console.log(total);
