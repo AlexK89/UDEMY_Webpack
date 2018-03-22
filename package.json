@@ -1,0 +1,19 @@
+{
+  "name": "webpack_2.0",
+  "version": "1.0.0",
+  "description": "UDEMY Webpack 2.0  course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexK89/UDEMY_Webpack.git"
+  },
+  "author": "Vasile Cojusco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexK89/UDEMY_Webpack/issues"
+  },
+  "homepage": "https://github.com/AlexK89/UDEMY_Webpack#readme"
+}
