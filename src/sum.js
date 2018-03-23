@@ -3,4 +3,4 @@ const sum = (a, b) => a + b;
 sum(2, 3);
 
 
-module.exports = sum;
+export default sum;	//ES2015 syntax
