@@ -10,7 +10,8 @@ const config = {
 	module: {
 		rules: [			// by rules we define which modules we want to use with webpack
 			{
-				use: 'babel-loader'
+				use: 'babel-loader',
+				test: /\.js$/,		//REGEX for filename
 			}
 		]
 	}
