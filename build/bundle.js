@@ -63,11 +63,23 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var image = document.createElement('img');
+image.src = 'http://lorempixel.com/600/400';
+
+document.body.appendChild(image);
+
+/***/ },
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -85,21 +97,24 @@ sum(2, 3);
 exports.default = sum; //ES2015 syntax
 
 /***/ },
-/* 1 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _sum = __webpack_require__(0);
+var _sum = __webpack_require__(1);
 
 var _sum2 = _interopRequireDefault(_sum);
+
+__webpack_require__(0);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //ES2015 syntax
 
-var total = (0, _sum2.default)(2, 5);
+var total = (0, _sum2.default)(2, 5); //ES2015 syntax
+
 
 console.log(total);
 
