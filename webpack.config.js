@@ -6,6 +6,13 @@ const config = {
 		// 'build' in this case it a destination, where to save the output
 		path: path.resolve(__dirname, 'build'),
 		filename: 'bundle.js' //following by convention file name is bundle.js
+	},
+	module: {
+		rules: [			// by rules we define which modules we want to use with webpack
+			{
+				use: 'babel-loader'
+			}
+		]
 	}
 };
 module.exports = config;
