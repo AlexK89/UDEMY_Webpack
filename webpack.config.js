@@ -12,6 +12,10 @@ const config = {
 			{
 				use: 'babel-loader',
 				test: /\.js$/,		//REGEX for filename
+			},
+			{
+				use: ['style-loader', 'css-loader'],		//loaders apply !!! from right to left !!!
+				test: /\.css$/,		//REGEX for filename
 			}
 		]
 	}
