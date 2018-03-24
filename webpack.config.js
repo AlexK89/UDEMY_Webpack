@@ -16,10 +16,16 @@ const config = {
 				test: /\.js$/,		//REGEX for filename
 			},
 			{
-				use: ['style-loader', 'css-loader'],		//loaders apply !!! from right to left !!!
+				// use: ['style-loader', 'css-loader'],		//loaders apply !!! from right to left !!!
+				loader: ExtractTextPlugin.extract({		//save css into separate files
+					loader: 'css-loader'
+				}),
 				test: /\.css$/,		//REGEX for filename
 			}
 		]
-	}
+	},
+	plugins: [
+		new ExtractTextPlugin('style.css')
+	]
 };
 module.exports = config;
