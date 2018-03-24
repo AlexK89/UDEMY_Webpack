@@ -1,4 +1,6 @@
 const path = require('path'); //NodeJS helper module to get the absolute file path
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const config = {
 	entry: './src/index.js', //our entry point of our App
 	output: {
