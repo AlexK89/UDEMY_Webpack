@@ -21,6 +21,16 @@ const config = {
 					loader: 'css-loader'
 				}),
 				test: /\.css$/,		//REGEX for filename
+			},
+			{
+				test: /\.(jpe?g | png | svg | gif) $/,
+				use: [
+					{
+						loader: 'url-loader',
+						options: {limit: 40000}
+					},
+					'image-webpack-loader'
+				]
 			}
 		]
 	},
