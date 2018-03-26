@@ -23,7 +23,7 @@ const config = {
 				test: /\.css$/,		//REGEX for filename
 			},
 			{
-				test: /\.(jpe?g | png | svg | gif) $/,
+				test: /\.(jpe?g|png|gif|svg)$/,
 				use: [
 					{
 						loader: 'url-loader',
@@ -31,6 +31,7 @@ const config = {
 					},
 					'image-webpack-loader'
 				]
+
 			}
 		]
 	},
