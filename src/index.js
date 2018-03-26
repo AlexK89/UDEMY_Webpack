@@ -10,5 +10,9 @@ const button = document.createElement('button');
 button.innerText = 'Click';
 document.body.appendChild(button);
 button.addEventListener('click', () => {
-	System.import('./image_viewer'); // importing external JS inside the code, not a beginning of file
+	System.import('./image_viewer').then(module => { // importing external JS inside the code, not a beginning of file
+			console.log(module);
+			module.default();
+		}
+	);
 });

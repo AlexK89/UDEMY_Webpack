@@ -158,7 +158,11 @@ var button = document.createElement('button');
 button.innerText = 'Click';
 document.body.appendChild(button);
 button.addEventListener('click', function () {
-	__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 0)); // importing external JS inside the code, not a beginning of file
+	__webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 0)).then(function (module) {
+		// importing external JS inside the code, not a beginning of file
+		console.log(module);
+		module.default();
+	});
 });
 
 /***/ }
