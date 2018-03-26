@@ -86,9 +86,14 @@ __webpack_require__(2);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var image = document.createElement('img');
-image.src = 'http://lorempixel.com/600/400';
+image.src = _small2.default;
 
 document.body.appendChild(image);
+
+var bigImage = document.createElement('img');
+bigImage.src = _big2.default;
+
+document.body.appendChild(bigImage);
 
 /***/ },
 /* 1 */
