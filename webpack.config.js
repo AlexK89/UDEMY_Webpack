@@ -7,7 +7,8 @@ const config = {
 		//  need to specify !!! absolute !!! file path.  __dirname is a constant in NodeJS
 		// 'build' in this case it a destination, where to save the output
 		path: path.resolve(__dirname, 'build'),
-		filename: 'bundle.js' //following by convention file name is bundle.js
+		filename: 'bundle.js', //following by convention file name is bundle.js
+		publicPath: 'build/'
 	},
 	module: {
 		rules: [			// by rules we define which modules we want to use with webpack
