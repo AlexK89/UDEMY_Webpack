@@ -1,8 +1,9 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 const VENDOR_LIBS = [ //creating an array of dependencies to optimize loading time by dividing files
 	"react", "lodash", "redux", "react-redux", "react-dom", "faker",
-	"react-input-range", "react-router",  "redux-form", "redux-thunk"
+	"react-input-range", "redux-form", "redux-thunk"
 ];
 
 module.exports = {
@@ -26,5 +27,13 @@ module.exports = {
 				test: /\.css$/
 			}
 		]
-	}
+	},
+	plugins: [
+		new webpack.optimize.CommonsChunkPlugin({		// looking for duplicates and ignore it
+			name: 'vendor'
+		}),
+		new HtmlWebpackPlugin({
+			
+		})
+	]
 };
