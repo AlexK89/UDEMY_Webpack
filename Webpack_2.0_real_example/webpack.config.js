@@ -13,7 +13,8 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: '[name].js' // [name] - takes entry property as a name of file
+		filename: '[name].[chunkhash].js' // [name] - takes entry property as a name of file, [chunkhash] - create unique
+		//identifier everytime you change your file
 	},
 	module: {
 		rules: [
@@ -30,7 +31,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.CommonsChunkPlugin({		// looking for duplicates and ignore it
-			name: 'vendor'
+			name: ['vendor', 'manifest']		// manifest clarify for browser a version of vendor file
 		}),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
