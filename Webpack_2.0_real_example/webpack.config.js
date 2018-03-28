@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin'); //adding all dist js files to index.html automatically
 const VENDOR_LIBS = [ //creating an array of dependencies to optimize loading time by dividing files
 	"react", "lodash", "redux", "react-redux", "react-dom", "faker",
 	"react-input-range", "redux-form", "redux-thunk"
