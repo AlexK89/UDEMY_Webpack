@@ -33,7 +33,7 @@ module.exports = {
 			name: 'vendor'
 		}),
 		new HtmlWebpackPlugin({
-			
+			template: 'src/index.html'
 		})
 	]
 };
