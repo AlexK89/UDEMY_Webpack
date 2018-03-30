@@ -35,6 +35,9 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({
 			template: 'src/index.html'
+		}),
+		new webpack.DefinePlugin({		// DefinePlugin use to bundle JS files
+			'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV) 	// to skip some error checking in production
 		})
 	]
 };
