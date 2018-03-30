@@ -7,6 +7,22 @@ import ArtistDetail from './components/artists/ArtistDetail';
 import ArtistCreate from './components/artists/ArtistCreate';
 import ArtistEdit from './components/artists/ArtistEdit';
 
+// React optimization - code splitting
+
+const componentsRoutes = {
+    component: Home,
+    path: '/',
+    indexRoute: { component: ArtistMain },
+    childRoutes: [
+        {
+            path: 'artists/new',
+            getComponent(location, cb) {        //getting child components async
+
+            }
+        }
+    ]
+};
+
 const Routes = () => {
   return (
     <Router history={hashHistory}>
